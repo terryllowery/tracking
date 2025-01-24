@@ -1,7 +1,11 @@
-use error_stack::{Report, Result, ResultExt};
-use tracing::{info, instrument, warn};
-use track::{error::{AppError, Suggestion}, init};
+use error_stack::Result;
+use track::{error::AppError, init};
 
+// track is binary name
+//
+// track start
+// track stop
+// track report
 
 fn main() -> Result<(), AppError> {
     init::error_reporting();
