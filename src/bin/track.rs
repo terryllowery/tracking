@@ -1,5 +1,5 @@
-use error_stack::Result;
-use track::{error::AppError, init};
+use error_stack::{Result, ResultExt};
+use track::{error::AppError, init, feature::cli};
 
 // track is binary name
 //
@@ -10,6 +10,9 @@ use track::{error::AppError, init};
 fn main() -> Result<(), AppError> {
     init::error_reporting();
     init::tracing();
+
+    cli::run().change_context(AppError)
+    .attach_printable("a CLI error occurred")?;
 
     Ok(())
     

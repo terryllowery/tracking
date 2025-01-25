@@ -14,6 +14,10 @@ fn start_command_starts_tracking_time() -> TestResult {
 
     todo!();
 
+    // TODO: Implement the test for the start command
+
+    #[allow(unreachable_code)]
+
     Ok(())
 }
 
@@ -24,6 +28,9 @@ fn stop_command_stops_tracking_time() -> TestResult {
 
     todo!();
 
+    // TODO: Implement the test for the stop command
+
+    #[allow(unreachable_code)]
     Ok(())
 }
 
